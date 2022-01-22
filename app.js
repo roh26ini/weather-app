@@ -81,6 +81,11 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+  let highTemperature = Math.round(response.data.main.temp_max);
+  let lowTemperature = Math.round(response.data.main.temp_min);
+  let highLowDisplay = document.querySelector("#min-max");
+  highLowDisplay.innerHTML = `Max-Min🌡️: ${highTemperature}° / ${lowTemperature}°`;
+  
 
   celsiusTemperature = response.data.main.temp;
 
@@ -99,6 +104,24 @@ function displayTemperature(response) {
   getForecast(response.data.coord);
 }
 
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+
+function showPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let units = "metric";
+  let apiKey = "d0ccb8680c4676f5b61747befbddb16e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showForecast);
+}
+
 function search(city) {
   let apiKey = "d0ccb8680c4676f5b61747befbddb16e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -113,5 +136,8 @@ function handleSubmit(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let button = document.querySelector("#current-location-button");
+button.addEventListener("click", getCurrentPosition);
 
 search("Singapore");

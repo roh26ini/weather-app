@@ -35,7 +35,8 @@
                 />
               </div>
               <div class="col-3">
-                <input type="submit" value="🔍" class="btn btn-primary" />
+                <input type="submit" value="🔍" class="btn btn-success" />
+                <button class="btn btn-primary" id="current-location-button">📍</button>
               </div>
             </div>
           </form>
@@ -54,28 +55,26 @@
                 </div>
               </div>
             </div>
-
-<div class="container">
   <div class="row justify-content-start">
     <div class="col-4">
       Humidity 💧: <span id="humidity"></span>%
     </div>
     <div class="col-4">
-      Wind 🍃: <span id="wind"></span>km/h
+      Wind 💨: <span id="wind"></span>km/h
     </div>
     <div class="col-4">
-      Min-Max 🌡️: <span id="min-max"></span>°
+       <span id="min-max"></span>
     </div>
             </div>
-          <hr />
+          <hr>
           <div class="weather-forecast" id="forecast"></div>
          </div>
       </div>
     </div>
-    <small>
+    <p>
           <a href="#" target="_blank">Open-source code</a>
           by Rohini Mani-Dayalan
-        </small>
+    </p>
     <script src="app.js"></script>
   </body>
 </html>
