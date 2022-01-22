@@ -42,35 +42,40 @@
           <div class="overview">
             <h1 id="city"></h1>
             <h2><span id="date"></span></h2>
+            <br>
             <h3 id="description"></h3>
           </div>
+          
           <div class="row">
             <div class="col-6">
-                 <div class="clearfix weather-temperature">
-                <img src="" alt="Clear" id="icon" class="weather-img">
-                 <div class="today-weather">
-                 <strong id="temperature"></strong
-                  ><span class="units"> °C</span>
+               <div class="clearfix weather-temperature">
+                <strong id="temperature"></strong><span class="units"> °C</span
+                ><img src="" alt="Clear" id="icon" class="weather-img" />
                 </div>
               </div>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Humidity 💧: <span id="humidity"></span>%</li>
-                <li>Wind 🍃: <span id="wind"></span>km/h</li>
-                <li>Min-Max Temperature: 🍃: <span id="wind"></span>km/h</li>
-              </ul>
+
+<div class="container">
+  <div class="row justify-content-start">
+    <div class="col-4">
+      Humidity 💧: <span id="humidity"></span>%
+    </div>
+    <div class="col-4">
+      Wind 🍃: <span id="wind"></span>km/h
+    </div>
+    <div class="col-4">
+      Min-Max 🌡️: <span id="min-max"></span>°
+    </div>
             </div>
-          </div>
           <hr />
           <div class="weather-forecast" id="forecast"></div>
-        </div>
-        <small>
+         </div>
+      </div>
+    </div>
+    <small>
           <a href="#" target="_blank">Open-source code</a>
           by Rohini Mani-Dayalan
         </small>
-      </div>
-    </div>
     <script src="app.js"></script>
   </body>
 </html>
