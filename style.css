@@ -1,9 +1,9 @@
 body {
-  font-family: 'Balsamiq Sans', cursive;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
   color: black;
   font-size: 35px;
   font-weight: 100;
@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
   color: black;
   font-size: 17px;
   font-weight: 100;
@@ -21,10 +21,8 @@ h2 {
   margin-bottom: 0;
 }
 
-
-
 h3 {
-    text-align: center;
+  text-align: center;
   color: black;
   font-size: 44px;
   font-weight: 100;
@@ -32,9 +30,7 @@ h3 {
   margin-bottom: 0;
   padding: 0;
   text-transform: capitalize;
- 
 }
-
 
 ul {
   margin: 0;
@@ -51,11 +47,9 @@ li {
   line-height: 19px;
 }
 
-
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
-
 }
 
 .weather-app {
@@ -63,7 +57,13 @@ li {
   border: 1px solid #dadde1;
   border-radius: 5px;
 
-  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+  background: radial-gradient(
+    circle at 7.5% 24%,
+    rgb(237, 161, 193) 0%,
+    rgb(250, 178, 172) 25.5%,
+    rgb(190, 228, 210) 62.3%,
+    rgb(215, 248, 247) 93.8%
+  );
   border-radius: 15px;
   box-shadow: rgba(248, 188, 245, 0.8) 0px 7px 89px 0px;
 }
@@ -81,9 +81,9 @@ li {
 
 .col-6 .weather-img {
   position: relative;
-    height: 88px;
-    width: 88px;
-    padding: 0 auto;
+  height: 88px;
+  width: 88px;
+  padding: 0 auto;
 }
 
 .col-6 .units {
@@ -121,5 +121,5 @@ li {
 }
 
 p {
-    text-align: center;
+  text-align: center;
 }
